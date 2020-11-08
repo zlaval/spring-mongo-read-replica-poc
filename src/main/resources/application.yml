@@ -1,0 +1,12 @@
+server:
+  port: ${SERVER_PORT:8000}
+  servlet.context-path: ${CONTEXT_PATH:/}
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27001,localhost:27002,localhost:27003/db
+      autoIndexCreation: false
+logging:
+  level:
+    root: DEBUG
