@@ -5,8 +5,11 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27001,localhost:27002,localhost:27003/db
+      uri: mongodb://localhost:27001,localhost:27002,localhost:27003/db?replicaSet=rs0
       autoIndexCreation: false
+      cluster-read: true
+      #keystore: mongo.jks
+      #keystore-password: "7777777"
 logging:
   level:
     root: DEBUG
